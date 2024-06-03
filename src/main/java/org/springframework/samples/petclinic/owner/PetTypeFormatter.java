@@ -15,9 +15,11 @@
  */
 package org.springframework.samples.petclinic.owner;
 
-import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Component;
+
+import com.google.gson.JsonNull;
 
 import java.text.ParseException;
 import java.util.Collection;
@@ -38,7 +40,6 @@ public class PetTypeFormatter implements Formatter<PetType> {
 
 	private final OwnerRepository owners;
 
-	@Autowired
 	public PetTypeFormatter(OwnerRepository owners) {
 		this.owners = owners;
 	}
